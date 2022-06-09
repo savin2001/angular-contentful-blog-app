@@ -1,14 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kdam+Thmor+Pro&family=Montserrat&family=Poppins&display=swap");
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body * {
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.5px;
 }
+
 .container {
   margin: 0 auto;
   width: 100%;
@@ -16,24 +21,47 @@ body * {
   justify-content: center;
   align-items: center;
 }
+
 .container-pad {
   width: 90%;
+  display: flex;
+  flex-direction: column;
 }
+
 .mat-typography h1 {
   font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  letter-spacing: 5px;
 }
+
 .mat-typography h3 {
   font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
 }
+
+.mat-typography h4 {
+  font-family: "Secular One", sans-serif;
+  letter-spacing: 2.5px;
+}
+
 .mat-typography h5 {
   font-family: "Secular One", sans-serif;
+  letter-spacing: 1.3px;
 }
+
+.mat-typography p {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.5px;
+}
+
 .mat-toolbar-row,
 .mat-toolbar-single-row {
   display: block !important;
   justify-content: center !important;
   align-items: center !important;
 }
+
 .mat-typography header {
   font-family: "Kdam Thmor Pro", sans-serif;
   display: flex;
@@ -41,20 +69,37 @@ body * {
   margin: 10px;
   align-items: center;
 }
-.mat-typography p {
-  font-family: "Poppins", sans-serif;
-}
 
 .mat-typography header div span {
   padding: 0 5px;
 }
+
 .logo-2 {
   font-size: 1.7rem;
   font-weight: 100 !important;
 }
+
 .logo-1,
 .logo-3 {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   font-weight: 100 !important;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.mat-card-header-text {
+  margin: 0 !important;
+}
+
+.mat-stroked-button:hover {
+  color: #fff;
+  background-color: #f44336;
+  transition-duration: .4s;
+}
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: 2px 5px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
