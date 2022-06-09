@@ -1,6 +1,6 @@
 <p class="container">
   <mat-toolbar color="warn">
-    <header>
+    <header [routerLink]="['/']"  id="blog-name">
       <div class="">
         <span class="logo-1">The</span>
         <span class="logo-2">Dev</span>
@@ -9,4 +9,8 @@
     </header>
   </mat-toolbar>
 </p>
-<router-outlet></router-outlet>
+<div class="container">
+  <main class="container-pad">
+    <router-outlet></router-outlet>
+  </main>
+</div>

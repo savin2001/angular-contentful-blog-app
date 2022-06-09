@@ -18,7 +18,12 @@ export class ContentfulService {
   // Getting all the published blogs on the CMS
   getAllEntries() {
     const promise = this.client.getEntries();
+    return from(promise);
+  }
 
+  // Fetching a specific blog using the ID
+  getEntryById(id: string) {
+    const promise = this.client.getEntry(id);
     return from(promise);
   }
 }

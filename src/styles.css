@@ -69,6 +69,10 @@ body * {
   margin: 10px;
   align-items: center;
 }
+#blog-name:hover {
+  cursor: pointer;
+  color: rgba(192, 219, 141, 0.884);
+}
 
 .mat-typography header div span {
   padding: 0 5px;
@@ -86,8 +90,15 @@ body * {
   font-weight: 100 !important;
 }
 
+.blog-posts-container {
+  display: grid;
+  grid-template-columns: repeat(4,  minmax(20px, auto));;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
 .example-card {
-  max-width: 400px;
+  max-width: 300px;
 }
 
 .mat-card-header-text {
@@ -99,7 +110,15 @@ body * {
   background-color: #f44336;
   transition-duration: .4s;
 }
+
 .mat-card:not([class*=mat-elevation-z]) {
-  box-shadow: 2px 5px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 3px 8px 0 rgba(7, 7, 7, 0.3);
   border-radius: 10px;
+  transition-duration: 0.3s;
+}
+
+.mat-card:not([class*=mat-elevation-z]):hover {
+  box-shadow: 4px 3px 11px 6px rgba(43, 43, 43, 0.5);
+  transform: translateY(-3px);
+  transition-duration: 0.3s;
 }

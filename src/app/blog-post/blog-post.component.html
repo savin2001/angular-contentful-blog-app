@@ -1,0 +1,8 @@
+<main *ngIf="blogPost$ | async as blogPost">
+
+    <img src="" alt="">
+    <h1>{{blogPost.fields.title}}</h1>
+    <pre>
+        {{ blogPost | json}}
+    </pre>
+</main>
