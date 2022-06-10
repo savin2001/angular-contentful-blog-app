@@ -29,9 +29,11 @@ body * {
 }
 
 .mat-typography h1 {
-  font-family: "Dancing Script", cursive;
-  font-size: 3rem;
-  letter-spacing: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  line-height: 3rem;
 }
 
 .mat-typography h3 {
@@ -55,6 +57,7 @@ body * {
   letter-spacing: 1.5px;
 }
 
+/* App bar */
 .mat-toolbar-row,
 .mat-toolbar-single-row {
   display: block !important;
@@ -63,16 +66,20 @@ body * {
 }
 
 .mat-typography header {
-  font-family: "Kdam Thmor Pro", sans-serif;
   display: flex;
   justify-content: center;
   margin: 10px;
   align-items: center;
 }
+
+
 #blog-name:hover {
   cursor: pointer;
   color: rgba(192, 219, 141, 0.884);
+  transform: translateY(-1px);
+  transition-duration: .3s;
 }
+
 
 .mat-typography header div span {
   padding: 0 5px;
@@ -81,22 +88,25 @@ body * {
 .logo-2 {
   font-size: 1.7rem;
   font-weight: 100 !important;
+  font-family: 'Kdam Thmor Pro', sans-serif !important;
 }
 
 .logo-1,
 .logo-3 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Kdam Thmor Pro', sans-serif !important;
   font-size: 1.2rem;
   font-weight: 100 !important;
 }
 
 .blog-posts-container {
   display: grid;
-  grid-template-columns: repeat(4,  minmax(20px, auto));;
+  grid-template-columns: repeat(4, minmax(20px, auto));
+  ;
   grid-gap: 10px;
   padding: 10px;
 }
 
+/* Blog cards */
 .example-card {
   max-width: 300px;
 }
@@ -121,4 +131,34 @@ body * {
   box-shadow: 4px 3px 11px 6px rgba(43, 43, 43, 0.5);
   transform: translateY(-3px);
   transition-duration: 0.3s;
+}
+
+/* Blog post */
+.blog-post-main-image {
+  width: 100%;
+  padding: 0 0 20px;
+}
+
+.blog-post-title {
+  padding: 0 0 20px;
+}
+
+.blog-post-author {
+  padding: 20px 0 0 0;
+}
+
+.blog-post-date {
+  padding: 0 0 5px;
+}
+
+#blog-details {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  margin-top: 40px;
+  color: #7c7c7c !important;
+}
+#blog-details:hover {
+  box-shadow: 4px 3px 8px 0 rgba(7, 7, 7, 0.3);
+  transform: translateY(0);
 }
