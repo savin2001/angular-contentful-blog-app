@@ -1,13 +1,16 @@
-<main *ngIf="blogPost$ | async as blogPost">
-  <h1 class="blog-post-title">{{ blogPost.fields.title }}</h1>
-  <img class="blog-post-main-image" [src]="blogPost.fields.featuredImage.fields.file.url" alt="Photo of a Shiba Inu" />
-  <p>
-    <markdown ngPreserveWhitespaces [innerHtml]="_returnHtmlFromRichText(blogPost.fields.content )">
-    </markdown>
-  </p>
-  <mat-card id="blog-details">
-    <h4 class="blog-post-author">{{ blogPost.fields.author }}</h4>
-    <h5 class="blog-post-date">Publish on: {{ blogPost.fields.updatedDate | date:'dd LLL yyyy'}}</h5>
-  </mat-card>
+<div class="container">
+  <main *ngIf="blogPost$ | async as blogPost" class="container-pad blog">
+    <h1 class="blog-post-title">{{ blogPost.fields.title }}</h1>
+    <img class="blog-post-main-image" [src]="blogPost.fields.featuredImage.fields.file.url"
+      alt="Photo of a Shiba Inu" />
+    <p>
+      <markdown ngPreserveWhitespaces [innerHtml]="_returnHtmlFromRichText(blogPost.fields.content )">
+      </markdown>
+    </p>
+    <mat-card id="blog-details">
+      <h4 class="blog-post-author">{{ blogPost.fields.author }}</h4>
+      <h5 class="blog-post-date">Publish on: {{ blogPost.fields.updatedDate | date:'dd LLL yyyy'}}</h5>
+    </mat-card>
 
-</main>
+  </main>
+</div>

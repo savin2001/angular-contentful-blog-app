@@ -17,9 +17,10 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 
 // Markdown file used to render HTML components from a string received from the API
 import { MarkdownModule } from 'ngx-markdown';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, BlogPostComponent],
+  declarations: [AppComponent, HomeComponent, BlogPostComponent, LandingPageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

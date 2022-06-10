@@ -12,12 +12,15 @@ body * {
   padding: 0;
   font-family: "Poppins", sans-serif;
   letter-spacing: 1.5px;
+  transition-duration: 0.3s;
 }
 
 .container {
   margin: 0 auto;
   width: 100%;
+  max-width: 1400px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -62,7 +65,12 @@ body * {
 .mat-toolbar-single-row {
   display: block !important;
   justify-content: center !important;
-  align-items: center !important;
+  align-items: center !important;  
+  max-width: 1400px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 
 .mat-typography header {
@@ -70,6 +78,7 @@ body * {
   justify-content: center;
   margin: 10px;
   align-items: center;
+  max-width: 1400px;
 }
 
 
@@ -89,6 +98,7 @@ body * {
   font-size: 1.7rem;
   font-weight: 100 !important;
   font-family: 'Kdam Thmor Pro', sans-serif !important;
+  color: #ffff00;
 }
 
 .logo-1,
@@ -98,17 +108,122 @@ body * {
   font-weight: 100 !important;
 }
 
+
+
+/* Landing section */
+.landing-page {
+  background-color: #f44336;
+  color: #fff;
+  width: 100%;
+  max-width: 1400px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 40px;
+  padding: 30px 0;
+  margin-bottom: 50px;
+  z-index: 4;
+}
+
+.landing-details {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+
+}
+
+.landing-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-main h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding: 15px 0;
+}
+
+.landing-title-1,
+.landing-title-3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 100 !important;
+}
+
+.landing-title-2 {
+  font-family: 'Kdam Thmor Pro', sans-serif !important;
+  font-size: 3rem;
+  color: #ffff00;
+}
+
+.landing-main h1 span {
+  text-transform: uppercase;
+  padding: 5px 0;
+}
+
+.landing-other {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 2;
+  margin: 20px 0;
+}
+
+.landing-other h2,
+.landing-other p {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1;
+  text-align: left;
+}
+
+.landing-other p {
+  flex: 1;
+  font-size: 1.2rem;
+}
+
+.landing-other h2 .landing-subtitle-1 {
+  font-family: 'Fira Code', monospace !important;
+  margin: 10px 0;
+}
+
+hr {
+  height: 2px;
+  background-color: #ffff00;
+  margin: 10px 0;
+}
+
+/* Blog cards */
 .blog-posts-container {
   display: grid;
   grid-template-columns: repeat(4, minmax(20px, auto));
-  ;
+  justify-content: center;
+  align-content: center;
   grid-gap: 10px;
   padding: 10px;
 }
 
-/* Blog cards */
+.container-pad h2 {
+  font-family: "Montserrat", sans-serif !important;
+  text-align: center;
+  font-size: 2rem;
+  margin: 30px;
+}
+
 .example-card {
   max-width: 300px;
+  margin-bottom: 20px;
 }
 
 .mat-card-header-text {
@@ -134,6 +249,12 @@ body * {
 }
 
 /* Blog post */
+.blog {
+  position: relative;
+  top: 60px;
+  z-index: 1;
+}
+
 .blog-post-main-image {
   width: 100%;
   padding: 0 0 20px;
@@ -155,10 +276,67 @@ body * {
   display: flex;
   width: fit-content;
   flex-direction: column;
-  margin-top: 40px;
+  margin: 0 40px;
   color: #7c7c7c !important;
 }
+
 #blog-details:hover {
   box-shadow: 4px 3px 8px 0 rgba(7, 7, 7, 0.3);
   transform: translateY(0);
+}
+
+/* Smaller screens */
+/* Phones */
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+  .landing-other {
+    flex-direction: column;
+  }
+  .landing-other p {
+    font-size: .9rem;
+  }
+
+  .blog-posts-container {
+    grid-template-columns: repeat(1, minmax(20px, auto));
+  }
+
+  * h1 {
+    font-size: 1.6rem !important;
+  }
+
+  * h2 {
+    font-size: 1.3rem !important;
+  }
+
+  * h3 {
+    font-size: 1rem !important;
+  }
+
+  * h4 {
+    font-size: .7rem !important;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .blog-posts-container {
+    grid-template-columns: repeat(2, minmax(20px, auto));
+  }
+  .landing-other p {
+    font-size: .9rem;
+  }
+  * h1 {
+    font-size: 2.2rem !important;
+  }
+
+  * h2 {
+    font-size: 1.5rem !important;
+  }
+
+  * h3 {
+    font-size: 1.2rem !important;
+  }
+
+  * h4 {
+    font-size: .9rem !important;
+  }
 }
